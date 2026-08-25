@@ -1,0 +1,43 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+/**
+ * SmoothScroll — wraps page content with Lenis for butter-smooth inertial scrolling.
+ * Uses native scroll-behavior: smooth as fallback on mobile.
+ */
+export default function SmoothScroll({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const lenisRef = useRef<import("lenis").default | null>(null);
+
+  useEffect(() => {
+    // Dynamically import Lenis to avoid SSR issues
+    import("lenis").then(({ default: Lenis }) => {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        touchMultiplier: 2,
+      });
+
+      lenisRef.current = lenis;
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      const rafId = requestAnimationFrame(raf);
+
+      return () => {
+        cancelAnimationFrame(rafId);
+        lenis.destroy();
+      };
+    });
+  }, []);
+
+  return <>{children}</>;
+}

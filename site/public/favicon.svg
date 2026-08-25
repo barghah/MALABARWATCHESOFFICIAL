@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" fill="#1a1410"/>
+  <g transform="translate(32, 32)">
+    <!-- Crown -->
+    <path
+      d="M-16 10 L-10 -8 L-2 2 L0 -12 L2 2 L10 -8 L16 10 Z"
+      stroke="#c9a55c"
+      stroke-width="2"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <circle cx="0" cy="-12" r="2" fill="#c9a55c"/>
+    <circle cx="-10" cy="-8" r="2" fill="#c9a55c"/>
+    <circle cx="10" cy="-8" r="2" fill="#c9a55c"/>
+    <line x1="-16" y1="12" x2="16" y2="12" stroke="#c9a55c" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
