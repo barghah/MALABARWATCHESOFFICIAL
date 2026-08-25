@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { SITE_CONFIG, buildGenericWhatsAppLink } from "@/lib/config";
+import { watchCount } from "@/data/watches";
 
 const ArrowRight = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -31,7 +32,7 @@ export default function Hero() {
 
   const stats = [
     { value: "1853", label: "Est. Heritage" },
-    { value: "12+", label: "Curated Models" },
+    { value: `${watchCount}+`, label: "Curated Models" },
     { value: "100%", label: "Verified Authentic" },
   ];
 
