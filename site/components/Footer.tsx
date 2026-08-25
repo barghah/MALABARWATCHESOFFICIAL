@@ -90,8 +90,11 @@ export default function Footer() {
       {/* ── Footer bar ── */}
       <div className="container" style={{ paddingBlock: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
         {/* Brand */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Image src="/logo.png" alt="Malabar Watches" width={55} height={31} style={{ objectFit: "contain" }} />
+          <span style={{ fontFamily: "var(--sans)", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.15em", color: "var(--text-0)" }}>
+            MALABARWATCHESOFFICIAL
+          </span>
         </div>
 
         {/* Copyright */}

@@ -73,21 +73,17 @@ export default function Hero() {
       <motion.div style={{ opacity: fadeOut, position: "relative", zIndex: 2 }} className="container">
         <div style={{
           position: "relative", zIndex: 2,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
           gap: "clamp(2rem, 5vw, 6rem)",
           alignItems: "center",
           minHeight: "100svh",
-          paddingTop: "120px",
+          paddingTop: "76px",
           paddingBottom: "4rem",
-        }} className="grid grid-cols-1 lg:grid-cols-2">
+        }} className="hero-grid">
 
           {/* ── Left: Text content ── */}
           <motion.div style={{ y: textY }}>
-            {/* Eyebrow */}
-            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: [0.19,1,0.22,1] }}>
-              <span className="t-eyebrow" style={{ display: "flex", alignItems: "center", marginBottom: "2rem" }}>
-                {SITE_CONFIG.name}
-              </span>
-            </motion.div>
 
             {/* Main headline — staggered line by line */}
             <div style={{ overflow: "hidden", marginBottom: "0.4rem" }}>
@@ -197,7 +193,7 @@ export default function Hero() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 position: "relative",
-                width: "min(500px, 90vw)",
+                width: "min(500px, 44vw)",
                 aspectRatio: "1",
                 borderRadius: "50%",
                 overflow: "hidden",

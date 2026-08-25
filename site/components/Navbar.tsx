@@ -61,10 +61,13 @@ export default function Navbar() {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
+            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "10px" }}
             aria-label="Home"
           >
             <Image src="/logo.png" alt="Malabar Watches" width={60} height={34} style={{ objectFit: "contain" }} priority />
+            <span style={{ fontFamily: "var(--sans)", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.15em", color: "var(--text-0)" }}>
+              MALABARWATCHESOFFICIAL
+            </span>
           </button>
 
           {/* Desktop nav */}
