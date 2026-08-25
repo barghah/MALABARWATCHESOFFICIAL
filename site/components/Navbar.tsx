@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { buildGenericWhatsAppLink, SITE_CONFIG } from "@/lib/config";
+import { buildGenericWhatsAppLink } from "@/lib/config";
 import Image from "next/image";
-
-
 
 const WaIcon = ({ size = 15 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -24,7 +22,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -45,9 +43,9 @@ export default function Navbar() {
           inset: "0 0 auto 0",
           zIndex: 100,
           transition: "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
-          background: scrolled ? "rgba(243, 239, 230, 0.92)" : "transparent",
-          borderBottom: scrolled ? "1px solid rgba(201,165,92,0.1)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 40px rgba(0,0,0,0.04)" : "none",
+          background: scrolled ? "rgba(226, 204, 174, 0.94)" : "transparent",
+          borderBottom: scrolled ? "1px solid rgba(74, 44, 22, 0.16)" : "1px solid transparent",
+          boxShadow: scrolled ? "0 8px 30px rgba(74, 44, 22, 0.08)" : "none",
           backdropFilter: scrolled ? "blur(20px)" : "none",
         }}
       >
@@ -55,17 +53,41 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          height: scrolled ? "60px" : "76px",
+          height: scrolled ? "64px" : "80px",
           transition: "height 0.35s ease",
         }}>
-          {/* Logo */}
+          {/* Logo & Brand Name */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "10px" }}
+            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "12px" }}
             aria-label="Home"
           >
-            <Image src="/logo.png" alt="Malabar Watches" width={60} height={34} style={{ objectFit: "contain" }} priority />
-            <span style={{ fontFamily: "var(--sans)", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "0.15em", color: "var(--text-0)" }}>
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all 0.3s ease"
+            }}>
+              <Image
+                src="/logo.png"
+                alt="Malabar Watches"
+                width={56}
+                height={32}
+                style={{
+                  objectFit: "contain",
+                  filter: "drop-shadow(0 1px 3px rgba(74, 44, 22, 0.2))"
+                }}
+                priority
+              />
+            </div>
+            <span style={{
+              fontFamily: "var(--sans)",
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              letterSpacing: "0.16em",
+              color: "var(--accent-dark)",
+              transition: "color 0.35s ease"
+            }}>
               MALABARWATCHESOFFICIAL
             </span>
           </button>
@@ -74,30 +96,42 @@ export default function Navbar() {
           <nav style={{ display: "flex", alignItems: "center", gap: "2.5rem" }} className="desk-nav">
             {NAV_LINKS.map(link => (
               <button key={link.href} onClick={() => scroll(link.href)}
-                style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--sans)", fontSize: "0.72rem", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-2)", transition: "color 0.2s" }}
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontFamily: "var(--sans)",
+                  fontSize: "0.72rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "var(--accent-dark)",
+                  transition: "color 0.2s"
+                }}
                 onMouseEnter={e => (e.currentTarget.style.color = "var(--gold-1)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "var(--text-2)")}
+                onMouseLeave={e => (e.currentTarget.style.color = "var(--accent-dark)")}
               >
                 {link.label}
               </button>
             ))}
-            <a href={buildGenericWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="btn-wa" style={{ padding: "0.52rem 1.1rem", fontSize: "0.65rem" }}>
-              <WaIcon size={13} /> Enquire
+            <a href={buildGenericWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="btn-wa" style={{ padding: "0.55rem 1.2rem", fontSize: "0.68rem" }}>
+              <WaIcon size={14} /> Enquire
             </a>
           </nav>
 
           {/* Mobile hamburger */}
           <button onClick={() => setMenuOpen(!menuOpen)} className="mob-menu-btn"
-            style={{ display: "none", background: "none", border: "none", cursor: "pointer", flexDirection: "column", gap: "5px", padding: "4px" }}
+            style={{ display: "none", background: "none", border: "none", cursor: "pointer", flexDirection: "column", gap: "5px", padding: "6px" }}
             aria-label="Menu"
           >
             {[0, 1, 2].map(i => (
               <span key={i} style={{
-                display: "block", width: "22px", height: "1.5px",
-                background: "var(--gold-2)", borderRadius: "2px",
+                display: "block", width: "24px", height: "2px",
+                background: "var(--accent-dark)",
+                borderRadius: "2px",
                 transition: "all 0.3s ease", transformOrigin: "center",
                 opacity: menuOpen && i === 1 ? 0 : 1,
-                transform: menuOpen ? i === 0 ? "rotate(45deg) translateY(9px)" : i === 2 ? "rotate(-45deg) translateY(-9px)" : "none" : "none",
+                transform: menuOpen ? i === 0 ? "rotate(45deg) translateY(9.5px)" : i === 2 ? "rotate(-45deg) translateY(-9.5px)" : "none" : "none",
               }} />
             ))}
           </button>
@@ -109,14 +143,25 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(243, 239, 230, 0.97)", backdropFilter: "blur(24px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem" }}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 99,
+              background: "rgba(226, 204, 174, 0.98)",
+              backdropFilter: "blur(24px)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "2.2rem"
+            }}
           >
             <Image src="/logo.png" alt="Malabar Watches" width={90} height={50} style={{ objectFit: "contain" }} priority />
             {NAV_LINKS.map((link, i) => (
               <motion.button key={link.href}
                 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
                 onClick={() => scroll(link.href)}
-                style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--serif)", fontSize: "2.5rem", fontWeight: 700, color: "var(--text-0)", lineHeight: 1 }}
+                style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "var(--serif)", fontSize: "2.2rem", fontWeight: 700, color: "var(--accent-dark)", lineHeight: 1 }}
               >{link.label}</motion.button>
             ))}
             <motion.a initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}

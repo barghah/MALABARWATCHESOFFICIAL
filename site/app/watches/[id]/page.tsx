@@ -48,9 +48,24 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
   const waLink = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodedText}`;
 
   return (
-    <main style={{ minHeight: "100vh", paddingTop: "120px", paddingBottom: "80px", background: "var(--bg-1)" }} className="container">
-      <div style={{ marginBottom: "2rem" }}>
-        <Link href="/#collection" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "var(--text-2)", textDecoration: "none", fontSize: "0.85rem", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700 }}>
+    <main style={{ minHeight: "100vh", paddingTop: "120px", paddingBottom: "80px", background: "transparent" }} className="container">
+      <div style={{ marginBottom: "2.5rem" }}>
+        <Link href="/#collection" style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "8px",
+          color: "var(--accent-dark)",
+          textDecoration: "none",
+          fontSize: "0.82rem",
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          fontWeight: 700,
+          background: "rgba(226, 204, 174, 0.45)",
+          padding: "0.6rem 1.2rem",
+          borderRadius: "6px",
+          border: "1px solid rgba(74, 44, 22, 0.15)",
+          transition: "all 0.2s ease"
+        }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(180deg)" }}>
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
@@ -58,10 +73,32 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
         </Link>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "center" }}>
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+        gap: "clamp(2rem, 5vw, 4.5rem)",
+        alignItems: "center",
+        background: "rgba(226, 204, 174, 0.65)",
+        backdropFilter: "blur(16px)",
+        borderRadius: "16px",
+        padding: "clamp(1.5rem, 4vw, 3.5rem)",
+        border: "1px solid rgba(74, 44, 22, 0.14)",
+        boxShadow: "0 16px 48px rgba(74, 44, 22, 0.08)"
+      }}>
         
-        {/* Left: Huge Watch Image */}
-        <div style={{ position: "relative", aspectRatio: "4/5", background: "transparent", borderRadius: "8px", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {/* Left: Watch Image Showcase Card */}
+        <div style={{
+          position: "relative",
+          aspectRatio: "4/5",
+          background: "radial-gradient(circle at 50% 50%, #FFFFFF 0%, #FAF6F0 65%, #EAE0D0 100%)",
+          borderRadius: "14px",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          border: "1px solid rgba(122,75,34,0.15)",
+          boxShadow: "0 8px 30px rgba(74, 44, 22, 0.06)"
+        }}>
           <Image
             src={watch.image}
             alt={watch.name}
@@ -73,15 +110,15 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
 
         {/* Right: Watch Details */}
         <div>
-          <p className="t-eyebrow" style={{ color: "var(--gold-2)", marginBottom: "1rem" }}>{watch.brand} &middot; {watch.category}</p>
-          <h1 className="t-display" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", marginBottom: "1rem", color: "var(--text-0)" }}>
+          <p className="t-eyebrow" style={{ color: "var(--accent-bronze)", marginBottom: "1rem" }}>{watch.brand} &middot; {watch.category}</p>
+          <h1 className="t-display" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", marginBottom: "0.75rem", color: "var(--accent-dark)" }}>
             {watch.name}
           </h1>
-          <p className="t-body" style={{ fontSize: "1.2rem", color: "var(--text-1)", marginBottom: "2rem" }}>
+          <p style={{ fontFamily: "var(--serif)", fontSize: "1.4rem", color: "var(--accent-dark)", fontWeight: 700, marginBottom: "1.5rem" }}>
             {watch.price}
           </p>
-          <hr style={{ border: "none", borderTop: "1px solid var(--border)", marginBottom: "2rem" }} />
-          <p className="t-body" style={{ color: "var(--text-2)", marginBottom: "3rem", lineHeight: 1.8 }}>
+          <hr className="rule" style={{ marginBottom: "1.75rem" }} />
+          <p className="t-body" style={{ color: "var(--accent-bronze)", marginBottom: "2.5rem", lineHeight: 1.8 }}>
             {watch.description}
           </p>
 
@@ -90,11 +127,11 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
             target="_blank" rel="noopener noreferrer"
             style={{
               display: "inline-flex", alignItems: "center", gap: "0.8rem",
-              padding: "1.2rem 3rem", background: "#25d366", color: "#fff",
-              fontSize: "0.9rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase",
+              padding: "1.1rem 2.8rem", background: "#25d366", color: "#fff",
+              fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase",
               borderRadius: "4px", textDecoration: "none",
-              boxShadow: "0 8px 32px rgba(37,211,102,0.25)",
-              transition: "transform 0.2s"
+              boxShadow: "0 6px 24px rgba(37,211,102,0.3)",
+              transition: "all 0.2s ease"
             }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

@@ -23,11 +23,12 @@ export default function Marquee({ reverse = false }: { reverse?: boolean }) {
 
   return (
     <div style={{
-      borderTop: "1px solid rgba(201,165,92,0.1)",
-      borderBottom: "1px solid rgba(201,165,92,0.1)",
-      background: "var(--bg-0)",
+      borderTop: "1px solid rgba(74, 44, 22, 0.12)",
+      borderBottom: "1px solid rgba(74, 44, 22, 0.12)",
+      background: "rgba(226, 204, 174, 0.3)",
+      backdropFilter: "blur(8px)",
       overflow: "hidden",
-      padding: "0.9rem 0",
+      padding: "0.95rem 0",
       userSelect: "none",
     }}>
       <div
@@ -45,11 +46,11 @@ export default function Marquee({ reverse = false }: { reverse?: boolean }) {
               alignItems: "center",
               padding: "0 1.8rem",
               fontFamily: item === "✦" ? "serif" : "var(--sans)",
-              fontSize: item === "✦" ? "0.55rem" : "0.68rem",
-              fontWeight: item === "✦" ? 400 : 600,
+              fontSize: item === "✦" ? "0.6rem" : "0.7rem",
+              fontWeight: item === "✦" ? 400 : 700,
               letterSpacing: item === "✦" ? "0" : "0.22em",
               textTransform: "uppercase",
-              color: item === "✦" ? "var(--gold-2)" : "var(--text-2)",
+              color: item === "✦" ? "var(--accent-bronze)" : "var(--accent-dark)",
               whiteSpace: "nowrap",
             }}
           >

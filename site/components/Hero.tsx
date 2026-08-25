@@ -5,8 +5,6 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { SITE_CONFIG, buildGenericWhatsAppLink } from "@/lib/config";
 
-
-
 const ArrowRight = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M5 12h14M12 5l7 7-7 7" />
@@ -32,9 +30,9 @@ export default function Hero() {
   const scrollDown = () => document.querySelector("#collection")?.scrollIntoView({ behavior: "smooth" });
 
   const stats = [
-    { value: "1853", label: "Est." },
-    { value: "12+", label: "Models" },
-    { value: "100%", label: "Authentic" },
+    { value: "1853", label: "Est. Heritage" },
+    { value: "12+", label: "Curated Models" },
+    { value: "100%", label: "Verified Authentic" },
   ];
 
   return (
@@ -44,27 +42,28 @@ export default function Hero() {
       display: "flex",
       alignItems: "center",
       overflow: "hidden",
-      background: "var(--bg-0)",
+      background: "transparent",
     }}>
-      {/* ── Ambient background ── */}
+      {/* ── Ambient background glows ── */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
         {/* Left warm glow */}
         <div style={{
-          position: "absolute", top: "20%", left: "-10%",
+          position: "absolute", top: "15%", left: "-10%",
           width: "55vw", height: "70vh",
-          background: "radial-gradient(ellipse at center, rgba(201,165,92,0.06) 0%, transparent 65%)",
-          filter: "blur(20px)",
+          background: "radial-gradient(ellipse at center, rgba(226,204,174,0.45) 0%, transparent 65%)",
+          filter: "blur(30px)",
         }} />
         {/* Right deep glow */}
         <div style={{
           position: "absolute", top: "10%", right: "-5%",
           width: "50vw", height: "80vh",
-          background: "radial-gradient(ellipse at center, rgba(201,165,92,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(184,144,99,0.25) 0%, transparent 70%)",
+          filter: "blur(20px)",
         }} />
-        {/* Fine grid */}
+        {/* Fine luxury grid */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "linear-gradient(rgba(201,165,92,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(201,165,92,0.025) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(74,44,22,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(74,44,22,0.035) 1px, transparent 1px)",
           backgroundSize: "72px 72px",
           maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%)",
         }} />
@@ -78,7 +77,7 @@ export default function Hero() {
           gap: "clamp(2rem, 5vw, 6rem)",
           alignItems: "center",
           minHeight: "100svh",
-          paddingTop: "76px",
+          paddingTop: "80px",
           paddingBottom: "4rem",
         }} className="hero-grid">
 
@@ -90,7 +89,7 @@ export default function Hero() {
               <motion.h1 className="t-display"
                 initial={{ y: "110%" }} animate={{ y: 0 }}
                 transition={{ delay: 0.45, duration: 1, ease: [0.19,1,0.22,1] }}
-                style={{ color: "var(--text-0)" }}
+                style={{ color: "var(--accent-dark)" }}
               >
                 Time is the
               </motion.h1>
@@ -107,7 +106,7 @@ export default function Hero() {
               <motion.h1 className="t-display"
                 initial={{ y: "110%" }} animate={{ y: 0 }}
                 transition={{ delay: 0.65, duration: 1, ease: [0.19,1,0.22,1] }}
-                style={{ color: "var(--text-0)" }}
+                style={{ color: "var(--accent-dark)" }}
               >
                 that matters.
               </motion.h1>
@@ -121,7 +120,7 @@ export default function Hero() {
             />
 
             {/* Subtext */}
-            <motion.p className="t-body" style={{ maxWidth: "420px", marginBottom: "2.5rem" }}
+            <motion.p className="t-body" style={{ maxWidth: "440px", marginBottom: "2.5rem", color: "var(--accent-bronze)" }}
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
@@ -145,14 +144,14 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats row */}
-            <motion.div style={{ display: "flex", gap: "2.5rem", marginTop: "4rem", paddingTop: "2.5rem", borderTop: "1px solid rgba(201,165,92,0.1)" }}
+            <motion.div style={{ display: "flex", gap: "2.5rem", marginTop: "3.5rem", paddingTop: "2.5rem", borderTop: "1px solid rgba(74,44,22,0.12)" }}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }}
               transition={{ delay: 1.35, duration: 0.8 }}
             >
               {stats.map((s, i) => (
                 <div key={i}>
-                  <p style={{ fontFamily: "var(--serif)", fontSize: "2rem", color: "var(--gold-1)", lineHeight: 1, fontWeight: 700 }}>{s.value}</p>
-                  <p style={{ fontSize: "0.62rem", color: "var(--text-2)", letterSpacing: "0.14em", textTransform: "uppercase", marginTop: "4px" }}>{s.label}</p>
+                  <p style={{ fontFamily: "var(--serif)", fontSize: "2rem", color: "var(--accent-dark)", lineHeight: 1, fontWeight: 700 }}>{s.value}</p>
+                  <p style={{ fontSize: "0.65rem", color: "var(--accent-bronze)", letterSpacing: "0.14em", textTransform: "uppercase", marginTop: "5px", fontWeight: 600 }}>{s.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -174,7 +173,7 @@ export default function Hero() {
                   width: `${scale * 100}%`,
                   aspectRatio: "1",
                   borderRadius: "50%",
-                  border: `1px solid rgba(201,165,92,${0.08 - i * 0.02})`,
+                  border: `1px solid rgba(184,144,99,${0.25 - i * 0.05})`,
                   borderStyle: i === 1 ? "dashed" : "solid",
                 }}
               />
@@ -183,13 +182,13 @@ export default function Hero() {
             {/* Ambient glow */}
             <div style={{
               position: "absolute", width: "70%", aspectRatio: "1", borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(201,165,92,0.14) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(226,204,174,0.6) 0%, rgba(184,144,99,0.2) 50%, transparent 70%)",
               filter: "blur(30px)",
             }} />
 
             {/* Watch in circular frame */}
             <motion.div
-              animate={{ y: [0, -14, 0] }}
+              animate={{ y: [0, -12, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 position: "relative",
@@ -197,8 +196,8 @@ export default function Hero() {
                 aspectRatio: "1",
                 borderRadius: "50%",
                 overflow: "hidden",
-                background: "#f5f2ed",
-                boxShadow: "0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,165,92,0.2), 0 0 60px rgba(201,165,92,0.08)",
+                background: "radial-gradient(circle at 35% 35%, #F4E8D7 0%, #E2CCAE 70%, #CDAE85 100%)",
+                boxShadow: "0 35px 80px rgba(74,44,22,0.25), 0 0 0 1px rgba(184,144,99,0.4), 0 0 50px rgba(226,204,174,0.3)",
               }}
             >
               <Image
@@ -213,21 +212,33 @@ export default function Hero() {
             <motion.div className="glass max-sm:scale-75 max-sm:origin-bottom-right"
               initial={{ opacity: 0, y: 20, x: 20 }} animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.3, type: "spring", stiffness: 180 }}
-              style={{ position: "absolute", bottom: "8%", right: "-6%", padding: "1rem 1.25rem", borderRadius: "8px", minWidth: "155px" }}
+              style={{
+                position: "absolute", bottom: "8%", right: "-6%",
+                padding: "1.1rem 1.3rem", borderRadius: "14px", minWidth: "160px",
+                background: "rgba(226, 204, 174, 0.85)",
+                border: "1px solid rgba(74, 44, 22, 0.15)",
+                boxShadow: "0 10px 30px rgba(74, 44, 22, 0.1)"
+              }}
             >
-              <p style={{ fontSize: "0.55rem", color: "var(--gold-2)", letterSpacing: "0.16em", textTransform: "uppercase", fontWeight: 700, marginBottom: "3px" }}>Featured</p>
-              <p style={{ fontFamily: "var(--serif)", fontSize: "0.88rem", color: "var(--text-0)", fontWeight: 700, lineHeight: 1.2, marginBottom: "2px" }}>Chemin des Tourelles</p>
-              <p style={{ fontSize: "0.62rem", color: "var(--text-2)" }}>Powermatic 80 · Swiss Made</p>
+              <p style={{ fontSize: "0.6rem", color: "var(--accent-dark)", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: 800, marginBottom: "3px" }}>Featured</p>
+              <p style={{ fontFamily: "var(--serif)", fontSize: "0.92rem", color: "var(--accent-dark)", fontWeight: 700, lineHeight: 1.2, marginBottom: "2px" }}>Chemin des Tourelles</p>
+              <p style={{ fontSize: "0.68rem", color: "var(--accent-bronze)", fontWeight: 500 }}>Powermatic 80 · Swiss Made</p>
             </motion.div>
 
             {/* Top left badge */}
             <motion.div className="glass pulse-gold max-sm:scale-75 max-sm:origin-top-left"
               initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.5, type: "spring" }}
-              style={{ position: "absolute", top: "10%", left: "-4%", padding: "0.65rem 0.9rem", borderRadius: "8px", textAlign: "center" }}
+              style={{
+                position: "absolute", top: "10%", left: "-4%",
+                padding: "0.75rem 1rem", borderRadius: "14px", textAlign: "center",
+                background: "rgba(226, 204, 174, 0.85)",
+                border: "1px solid rgba(74, 44, 22, 0.15)",
+                boxShadow: "0 8px 24px rgba(74, 44, 22, 0.08)"
+              }}
             >
-              <p style={{ fontSize: "0.58rem", color: "var(--gold-2)", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>Kerala</p>
-              <p style={{ fontSize: "0.7rem", color: "var(--text-0)", fontWeight: 600, marginTop: "2px" }}>Based ✦</p>
+              <p style={{ fontSize: "0.6rem", color: "var(--accent-bronze)", letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 700 }}>Kerala</p>
+              <p style={{ fontSize: "0.75rem", color: "var(--accent-dark)", fontWeight: 700, marginTop: "2px" }}>Based ✦</p>
             </motion.div>
           </motion.div>
         </div>
@@ -237,11 +248,11 @@ export default function Hero() {
       <motion.button onClick={scrollDown}
         className="scroll-cue"
         animate={{ y: [0, 8, 0] }} transition={{ duration: 1.9, repeat: Infinity, ease: "easeInOut" }}
-        style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", background: "none", border: "none", cursor: "pointer", color: "var(--text-2)", display: "flex", flexDirection: "column", alignItems: "center", gap: "5px", zIndex: 5 }}
+        style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", background: "none", border: "none", cursor: "pointer", color: "var(--accent-bronze)", display: "flex", flexDirection: "column", alignItems: "center", gap: "5px", zIndex: 5 }}
         aria-label="Scroll down"
       >
-        <span style={{ fontSize: "0.58rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>Scroll</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <span style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 600 }}>Scroll</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </motion.button>
