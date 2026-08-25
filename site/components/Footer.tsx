@@ -105,9 +105,14 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p style={{ fontSize: "0.68rem", color: "var(--text-3)" }}>
-          © {new Date().getFullYear()} {SITE_CONFIG.name}. Kerala, India.
-        </p>
+        <div style={{ textAlign: "center" }}>
+          <p style={{ fontSize: "0.68rem", color: "var(--text-3)", marginBottom: "4px" }}>
+            © {new Date().getFullYear()} {SITE_CONFIG.name}. Kerala, India.
+          </p>
+          <p style={{ fontSize: "0.55rem", color: "var(--text-3)", opacity: 0.7, letterSpacing: "0.05em" }}>
+            Developed by <a href="https://barghah.tech" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-2)", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={e => e.currentTarget.style.color = "var(--gold-2)"} onMouseLeave={e => e.currentTarget.style.color = "var(--text-2)"}>barghah.tech</a>
+          </p>
+        </div>
 
         {/* Social */}
         <div style={{ display: "flex", gap: "1.25rem", alignItems: "center" }}>
