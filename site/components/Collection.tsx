@@ -67,7 +67,7 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
           <div style={{
             position: "relative",
             aspectRatio: "4 / 3",
-            background: "#f5f2ed",
+            background: "transparent",
             overflow: "hidden",
           }}>
             <Image
@@ -111,15 +111,15 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
                       display: "flex",
                       alignItems: "center",
                       gap: "6px",
-                      background: "#25d366",
-                      color: "#fff",
+                      background: "var(--text-0)",
+                      color: "var(--bg-1)",
                       padding: "0.52rem 1.2rem",
                       borderRadius: "2px",
                       fontSize: "0.68rem",
                       fontWeight: 800,
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
-                      boxShadow: "0 4px 16px rgba(37,211,102,0.4)",
+                      boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
                     }}
                   >
                     View Details

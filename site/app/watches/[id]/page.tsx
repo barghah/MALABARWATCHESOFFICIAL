@@ -61,7 +61,7 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "center" }}>
         
         {/* Left: Huge Watch Image */}
-        <div style={{ position: "relative", aspectRatio: "4/5", background: "var(--bg-0)", borderRadius: "8px", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border)", boxShadow: "0 24px 64px rgba(0,0,0,0.04)" }}>
+        <div style={{ position: "relative", aspectRatio: "4/5", background: "transparent", borderRadius: "8px", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <Image
             src={watch.image}
             alt={watch.name}
