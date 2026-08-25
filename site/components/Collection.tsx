@@ -3,7 +3,6 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { watches, WatchCategory } from "@/data/watches";
 import { buildWhatsAppLink } from "@/lib/config";
 
@@ -43,10 +42,12 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
       viewport={{ once: true, margin: "-50px" }}
       layout
     >
-      <Link
-        href={`/watches/${watch.id}`}
+      <a
+        href={buildWhatsAppLink(watch)}
+        target="_blank"
+        rel="noopener noreferrer"
         id={`card-${watch.id}`}
-        aria-label={`View ${watch.brand} ${watch.name}`}
+        aria-label={`Enquire about ${watch.brand} ${watch.name}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{ display: "block", textDecoration: "none" }}
@@ -121,7 +122,7 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
                       boxShadow: "0 4px 16px rgba(37,211,102,0.4)",
                     }}
                   >
-                    View Details
+                    <WaIcon /> Enquire on WhatsApp
                   </motion.div>
                 </motion.div>
               )}
@@ -185,7 +186,7 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
             </div>
           </div>
         </div>
-      </Link>
+      </a>
     </motion.div>
   );
 }

@@ -28,7 +28,8 @@ export function buildWhatsAppLink(watch: {
   category: string;
   price: string;
 }): string {
-  const message = `Hi! I'm interested in this watch:\n\n⌚ ${watch.brand} ${watch.name}\nCategory: ${watch.category}\nPrice: ${watch.price}\nReference: ${watch.id}\n\nCould you share more details?`;
+  const watchUrl = `https://malabarwatchesofficial.vercel.app/watches/${watch.id}`;
+  const message = `Hi! I'm interested in this watch:\n\n⌚ ${watch.brand} ${watch.name}\nCategory: ${watch.category}\nPrice: ${watch.price}\nReference: ${watch.id}\n\nWatch Link: ${watchUrl}\n\nCould you share more details?`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
