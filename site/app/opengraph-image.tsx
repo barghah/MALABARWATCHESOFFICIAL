@@ -11,47 +11,32 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#080604',
+          background: '#f3efe6',
           width: '100%',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '40px',
-          border: '8px solid #c9a55c',
+          padding: '60px',
+          border: '12px solid #c9a55c',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px', color: '#c9a55c' }}>
-          <svg width="80" height="60" viewBox="0 0 46 35" fill="none">
-            <path d="M3 31h40M3 31l5-19 10.5 9.5L23 5l4.5 16.5L38 12l5 19H3z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />
-            <circle cx="23" cy="5" r="2.2" fill="currentColor" />
-            <circle cx="8" cy="12" r="2.2" fill="currentColor" />
-            <circle cx="38" cy="12" r="2.2" fill="currentColor" />
-          </svg>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
+          <img src="https://malabarwatchesofficial.vercel.app/logo.png" height="80" alt="M&W Logo" style={{ objectFit: 'contain' }} />
+          <span style={{ fontSize: '42px', fontWeight: 700, color: '#1a1610', letterSpacing: '0.15em', marginLeft: '24px', fontFamily: 'sans-serif' }}>
+            MALABARWATCHESOFFICIAL
+          </span>
         </div>
-        <h1
-          style={{
-            fontSize: '72px',
-            color: '#c9a55c',
-            fontWeight: 700,
-            margin: 0,
-            padding: 0,
-            letterSpacing: '0.08em',
-            textAlign: 'center',
-          }}
-        >
-          MALABARWATCHESOFFICIAL
-        </h1>
         <p
           style={{
-            fontSize: '32px',
-            color: '#d4af6a',
-            marginTop: '30px',
+            fontSize: '36px',
+            color: '#3b3226',
+            marginTop: '20px',
             textAlign: 'center',
-            opacity: 0.8,
-            maxWidth: '800px',
-            lineHeight: 1.4,
+            maxWidth: '900px',
+            lineHeight: 1.5,
+            fontFamily: 'sans-serif',
           }}
         >
           {SITE_CONFIG.description}
