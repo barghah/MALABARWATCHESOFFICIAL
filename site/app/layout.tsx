@@ -16,6 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://malabarwatchesofficial.vercel.app"),
   title: `${SITE_CONFIG.name} — Premium Swiss Watches in Kerala`,
   description: SITE_CONFIG.description,
   keywords: ["Tissot", "watches", "Kerala", "Malabar", "Swiss watches", "luxury watches", "authentic watches", "WhatsApp"],
