@@ -58,8 +58,8 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
             background: "var(--bg-3)",
           border: `1px solid ${hovered ? "rgba(201,165,92,0.45)" : "rgba(201,165,92,0.08)"}`,
           boxShadow: hovered
-            ? "0 0 0 1px rgba(201,165,92,0.3), 0 20px 60px rgba(0,0,0,0.55), 0 0 40px rgba(201,165,92,0.06)"
-            : "0 2px 16px rgba(0,0,0,0.3)",
+            ? "0 0 0 1px rgba(201,165,92,0.15), 0 24px 64px rgba(0,0,0,0.04), 0 0 40px rgba(201,165,92,0.03)"
+            : "0 2px 16px rgba(0,0,0,0.02)",
           transform: hovered ? "translateY(-6px)" : "translateY(0)",
           transition: "all 0.35s cubic-bezier(0.19, 1, 0.22, 1)",
         }}>

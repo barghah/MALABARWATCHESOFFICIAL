@@ -47,7 +47,7 @@ export default function Navbar() {
           transition: "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
           background: scrolled ? "rgba(243, 239, 230, 0.92)" : "transparent",
           borderBottom: scrolled ? "1px solid rgba(201,165,92,0.1)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 40px rgba(0,0,0,0.5)" : "none",
+          boxShadow: scrolled ? "0 4px 40px rgba(0,0,0,0.04)" : "none",
           backdropFilter: scrolled ? "blur(20px)" : "none",
         }}
       >
