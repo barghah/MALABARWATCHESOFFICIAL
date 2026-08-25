@@ -45,7 +45,7 @@ export default function Navbar() {
           inset: "0 0 auto 0",
           zIndex: 100,
           transition: "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
-          background: scrolled ? "rgba(8, 6, 4, 0.92)" : "transparent",
+          background: scrolled ? "rgba(243, 239, 230, 0.92)" : "transparent",
           borderBottom: scrolled ? "1px solid rgba(201,165,92,0.1)" : "1px solid transparent",
           boxShadow: scrolled ? "0 4px 40px rgba(0,0,0,0.5)" : "none",
           backdropFilter: scrolled ? "blur(20px)" : "none",
@@ -64,7 +64,7 @@ export default function Navbar() {
             style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
             aria-label="Home"
           >
-            <Image src="/logo.png" alt="Malabar Watches" width={140} height={40} style={{ objectFit: "contain" }} priority />
+            <Image src="/logo.png" alt="Malabar Watches" width={140} height={40} style={{ objectFit: "contain", mixBlendMode: "multiply" }} priority />
           </button>
 
           {/* Desktop nav */}
@@ -106,9 +106,9 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(8,6,4,0.97)", backdropFilter: "blur(24px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem" }}
+            style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(243, 239, 230, 0.97)", backdropFilter: "blur(24px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem" }}
           >
-            <Image src="/logo.png" alt="Malabar Watches" width={200} height={60} style={{ objectFit: "contain" }} priority />
+            <Image src="/logo.png" alt="Malabar Watches" width={200} height={60} style={{ objectFit: "contain", mixBlendMode: "multiply" }} priority />
             {NAV_LINKS.map((link, i) => (
               <motion.button key={link.href}
                 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
