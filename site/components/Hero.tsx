@@ -225,7 +225,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Floating info card */}
-            <motion.div className="glass"
+            <motion.div className="glass max-sm:scale-75 max-sm:origin-bottom-right"
               initial={{ opacity: 0, y: 20, x: 20 }} animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.3, type: "spring", stiffness: 180 }}
               style={{ position: "absolute", bottom: "8%", right: "-6%", padding: "1rem 1.25rem", borderRadius: "8px", minWidth: "155px" }}
@@ -236,7 +236,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Top left badge */}
-            <motion.div className="glass pulse-gold"
+            <motion.div className="glass pulse-gold max-sm:scale-75 max-sm:origin-top-left"
               initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.5, type: "spring" }}
               style={{ position: "absolute", top: "10%", left: "-4%", padding: "0.65rem 0.9rem", borderRadius: "8px", textAlign: "center" }}
