@@ -3,16 +3,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { buildGenericWhatsAppLink, SITE_CONFIG } from "@/lib/config";
+import Image from "next/image";
 
-const Crown = ({ size = 22, style }: { size?: number; style?: React.CSSProperties }) => (
-  <svg width={size} height={size * 0.76} viewBox="0 0 46 35" fill="none" style={style}>
-    <path d="M3 31h40M3 31l5-19 10.5 9.5L23 5l4.5 16.5L38 12l5 19H3z"
-      stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />
-    <circle cx="23" cy="5" r="2.2" fill="currentColor" />
-    <circle cx="8" cy="12" r="2.2" fill="currentColor" />
-    <circle cx="38" cy="12" r="2.2" fill="currentColor" />
-  </svg>
-);
+
 
 const WaIcon = ({ size = 15 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -68,13 +61,10 @@ export default function Navbar() {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "10px" }}
+            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
             aria-label="Home"
           >
-            <span style={{ color: "var(--gold-2)" }}><Crown size={20} /></span>
-            <span style={{ fontFamily: "var(--sans)", fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--gold-2)" }}>
-              {SITE_CONFIG.name}
-            </span>
+            <Image src="/logo.png" alt="Malabar Watches" width={140} height={40} style={{ objectFit: "contain" }} priority />
           </button>
 
           {/* Desktop nav */}
@@ -118,7 +108,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(8,6,4,0.97)", backdropFilter: "blur(24px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem" }}
           >
-            <Crown size={36} style={{ color: "var(--gold-2)" }} />
+            <Image src="/logo.png" alt="Malabar Watches" width={200} height={60} style={{ objectFit: "contain" }} priority />
             {NAV_LINKS.map((link, i) => (
               <motion.button key={link.href}
                 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}

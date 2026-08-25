@@ -5,15 +5,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { SITE_CONFIG, buildGenericWhatsAppLink } from "@/lib/config";
 
-const Crown = ({ size = 48 }: { size?: number }) => (
-  <svg width={size} height={size * 0.76} viewBox="0 0 46 35" fill="none">
-    <path d="M3 31h40M3 31l5-19 10.5 9.5L23 5l4.5 16.5L38 12l5 19H3z"
-      stroke="currentColor" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
-    <circle cx="23" cy="5" r="2.2" fill="currentColor" />
-    <circle cx="8" cy="12" r="2.2" fill="currentColor" />
-    <circle cx="38" cy="12" r="2.2" fill="currentColor" />
-  </svg>
-);
+
 
 const ArrowRight = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -94,8 +86,7 @@ export default function Hero() {
           <motion.div style={{ y: textY }}>
             {/* Eyebrow */}
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: [0.19,1,0.22,1] }}>
-              <span className="t-eyebrow" style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "2rem" }}>
-                <span style={{ color: "var(--gold-2)" }}><Crown size={18} /></span>
+              <span className="t-eyebrow" style={{ display: "flex", alignItems: "center", marginBottom: "2rem" }}>
                 {SITE_CONFIG.name}
               </span>
             </motion.div>

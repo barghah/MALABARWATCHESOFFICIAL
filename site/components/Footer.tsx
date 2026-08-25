@@ -2,16 +2,9 @@
 
 import { motion } from "framer-motion";
 import { SITE_CONFIG, buildGenericWhatsAppLink } from "@/lib/config";
+import Image from "next/image";
 
-const Crown = ({ size = 22 }: { size?: number }) => (
-  <svg width={size} height={size * 0.76} viewBox="0 0 46 35" fill="none">
-    <path d="M3 31h40M3 31l5-19 10.5 9.5L23 5l4.5 16.5L38 12l5 19H3z"
-      stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round" />
-    <circle cx="23" cy="5" r="2.2" fill="currentColor" />
-    <circle cx="8" cy="12" r="2.2" fill="currentColor" />
-    <circle cx="38" cy="12" r="2.2" fill="currentColor" />
-  </svg>
-);
+
 
 export default function Footer() {
   return (
@@ -97,11 +90,8 @@ export default function Footer() {
       {/* ── Footer bar ── */}
       <div className="container" style={{ paddingBlock: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
         {/* Brand */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <span style={{ color: "var(--gold-2)" }}><Crown size={18} /></span>
-          <span style={{ fontFamily: "var(--sans)", fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--gold-2)" }}>
-            {SITE_CONFIG.name}
-          </span>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Image src="/logo.png" alt="Malabar Watches" width={120} height={35} style={{ objectFit: "contain" }} />
         </div>
 
         {/* Copyright */}
