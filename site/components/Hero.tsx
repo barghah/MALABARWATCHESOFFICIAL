@@ -196,16 +196,25 @@ export default function Hero() {
                 aspectRatio: "1",
                 borderRadius: "50%",
                 overflow: "hidden",
-                background: "radial-gradient(circle at 35% 35%, #F4E8D7 0%, #E2CCAE 70%, #CDAE85 100%)",
-                boxShadow: "0 35px 80px rgba(74,44,22,0.25), 0 0 0 1px rgba(184,144,99,0.4), 0 0 50px rgba(226,204,174,0.3)",
+                background: "radial-gradient(circle at 40% 35%, #FAF2E6 0%, #E5D0B5 65%, #C8A77E 100%)",
+                boxShadow: "0 35px 80px rgba(74,44,22,0.22), 0 0 0 1px rgba(184,144,99,0.35), 0 0 50px rgba(226,204,174,0.3)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
               }}
             >
-              <Image
-                src="/watches/watch_chemin_tourelles.jpg"
-                alt="Tissot Chemin des Tourelles Powermatic 80"
-                fill priority
-                style={{ objectFit: "contain", padding: "10px" }}
-              />
+              <div style={{ position: "relative", width: "90%", height: "90%" }}>
+                <Image
+                  src="/watches/watch_hero.png"
+                  alt="Tissot Chemin des Tourelles Powermatic 80"
+                  fill priority
+                  sizes="(max-width: 860px) 80vw, 44vw"
+                  style={{
+                    objectFit: "contain",
+                    filter: "drop-shadow(0 12px 28px rgba(74,44,22,0.22))"
+                  }}
+                />
+              </div>
             </motion.div>
 
             {/* Floating info card */}
