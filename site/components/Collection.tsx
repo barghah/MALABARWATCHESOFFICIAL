@@ -47,14 +47,15 @@ function WatchCard({ watch, index }: { watch: typeof watches[0]; index: number }
         href={`/watches/${watch.id}`}
         id={`card-${watch.id}`}
         aria-label={`View ${watch.brand} ${watch.name}`}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
         style={{ display: "block", textDecoration: "none" }}
       >
-        <div style={{
-          borderRadius: "4px",
-          overflow: "hidden",
-          background: "var(--bg-3)",
+        <div 
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          style={{
+            borderRadius: "4px",
+            overflow: "hidden",
+            background: "var(--bg-3)",
           border: `1px solid ${hovered ? "rgba(201,165,92,0.45)" : "rgba(201,165,92,0.08)"}`,
           boxShadow: hovered
             ? "0 0 0 1px rgba(201,165,92,0.3), 0 20px 60px rgba(0,0,0,0.55), 0 0 40px rgba(201,165,92,0.06)"
