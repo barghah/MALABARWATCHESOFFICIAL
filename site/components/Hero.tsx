@@ -235,6 +235,7 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <motion.button onClick={scrollDown}
+        className="scroll-cue"
         animate={{ y: [0, 8, 0] }} transition={{ duration: 1.9, repeat: Infinity, ease: "easeInOut" }}
         style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", background: "none", border: "none", cursor: "pointer", color: "var(--text-2)", display: "flex", flexDirection: "column", alignItems: "center", gap: "5px", zIndex: 5 }}
         aria-label="Scroll down"
@@ -266,6 +267,9 @@ export default function Hero() {
           }
           .hero-grid > div:last-child {
             order: -1;
+          }
+          .scroll-cue {
+            display: none !important;
           }
         }
       `}</style>
