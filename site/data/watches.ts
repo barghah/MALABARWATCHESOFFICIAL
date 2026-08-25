@@ -139,7 +139,7 @@ export const watches: Watch[] = [
     category: "Sports",
     price: "Contact for Price",
     description: "Swiss automatic diver with high-tech black ceramic rotating bezel, two-tone gold and steel rice-bead bracelet, 300m water resistance, and rotating anchor emblem.",
-    image: "/watches/watch_rado_captain_cook_twotone.jpg",
+    image: "/watches/watch_rado_captain_cook_twotone_studio.jpg",
   },
   {
     id: "RDO-002",
@@ -148,7 +148,7 @@ export const watches: Watch[] = [
     category: "Sports",
     price: "Contact for Price",
     description: "Iconic Swiss diver featuring high-tech emerald green ceramic bezel, matching sunray dial, 80-hour power reserve, and stainless steel beads-of-rice bracelet with original presentation box.",
-    image: "/watches/watch_rado_captain_cook_green.jpg",
+    image: "/watches/watch_rado_captain_cook_green_studio.jpg",
   },
   {
     id: "OMG-001",
@@ -157,7 +157,7 @@ export const watches: Watch[] = [
     category: "Chronograph",
     price: "Contact for Price",
     description: "Master Co-Axial Chronometer chronograph with deep blue teak-concept dial, red GMT dual-timezone hand, date at 6 o'clock, and luxury navy alligator leather strap.",
-    image: "/watches/watch_omega_aquaterra_gmt.jpg",
+    image: "/watches/watch_omega_aquaterra_gmt_studio.jpg",
   },
   {
     id: "OMG-002",
@@ -166,7 +166,7 @@ export const watches: Watch[] = [
     category: "Sports",
     price: "Contact for Price",
     description: "Sun-brushed grey ceramic dial with laser-engraved waves, blue ceramic bezel with white enamel diving scale, Master Chronometer 8800 movement, and blue rubber strap in presentation box.",
-    image: "/watches/watch_omega_seamaster_diver300.jpg",
+    image: "/watches/watch_omega_seamaster_diver300_studio.jpg",
   },
   {
     id: "CHP-001",
@@ -175,7 +175,7 @@ export const watches: Watch[] = [
     category: "Limited Edition",
     price: "Contact for Price",
     description: "High-jewelry Swiss chronograph with brilliant-cut diamond paved bezel and lugs, column pushers with lotus-shaped crowns, and silver-white dial on high-polish steel bracelet.",
-    image: "/watches/watch_chopard_imperiale_diamond.jpg",
+    image: "/watches/watch_chopard_imperiale_diamond_studio.jpg",
   },
   {
     id: "FM-001",
@@ -184,7 +184,7 @@ export const watches: Watch[] = [
     category: "Chronograph",
     price: "Contact for Price",
     description: "Vintage-inspired 'Tasti Tondi' chronograph featuring a decagonal pulsation scale, dual-tone sector dial, engraved Roman numerals, and handcrafted black leather strap.",
-    image: "/watches/watch_furlan_marri_pulsometer.jpg",
+    image: "/watches/watch_furlan_marri_pulsometer_studio.jpg",
   },
   {
     id: "UG-001",
@@ -193,7 +193,7 @@ export const watches: Watch[] = [
     category: "Classic",
     price: "Contact for Price",
     description: "Exquisite vintage Swiss dress timepiece with solid gold hand-engraved coin-edge bezel, champagne gold dial, and rich brown crocodile leather strap.",
-    image: "/watches/watch_universal_geneve_gold.jpg",
+    image: "/watches/watch_universal_geneve_gold_studio.jpg",
   },
   {
     id: "GS-001",
@@ -202,7 +202,7 @@ export const watches: Watch[] = [
     category: "Classic",
     price: "Contact for Price",
     description: "Legendary 36,000 vph ultra-high precision Japanese mechanical watch. Crisp Zaratsu-polished grammar-of-design steel case and silver sunburst dial on black leather strap.",
-    image: "/watches/watch_grand_seiko_hibeat.jpg",
+    image: "/watches/watch_grand_seiko_hibeat_studio.jpg",
   },
   {
     id: "RDO-003",
@@ -211,7 +211,7 @@ export const watches: Watch[] = [
     category: "Classic",
     price: "Contact for Price",
     description: "Sculpted tonneau stainless steel case with minimalist silver dial, elongated hour batons, date window, and integrated solid link steel bracelet.",
-    image: "/watches/watch_rado_dstar_silver.jpg",
+    image: "/watches/watch_rado_dstar_silver_studio.jpg",
   },
   {
     id: "RDO-004",
@@ -220,7 +220,7 @@ export const watches: Watch[] = [
     category: "Classic",
     price: "Contact for Price",
     description: "Refined dress watch with radial guilloché outer ring, sunray silver center dial, blued steel hands, date window at 6 o'clock, and embossed black alligator leather strap.",
-    image: "/watches/watch_rado_coupole_classic.jpg",
+    image: "/watches/watch_rado_coupole_classic_studio.jpg",
   },
 ];
 
