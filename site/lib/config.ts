@@ -5,7 +5,7 @@
 // Format: country code + number, no +, no spaces (e.g. "919876543210")
 // =============================================================================
 
-export const WHATSAPP_NUMBER = "919400885646"; // ← UPDATE THIS with the real number
+export const WHATSAPP_NUMBER = "919061501650"; // ← UPDATE THIS with the real number
 
 export const SITE_CONFIG = {
   name: "MALABARWATCHESOFFICIAL",
