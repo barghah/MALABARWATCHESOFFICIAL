@@ -23,7 +23,7 @@ export default async function Image() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
-          <img src="https://malabarwatchesofficial.vercel.app/logo.png" height="80" alt="M&W Logo" style={{ objectFit: 'contain' }} />
+          <img src="https://malabarwatchesofficial.vercel.app/logo.png" width="142" height="80" alt="M&W Logo" />
           <span style={{ fontSize: '42px', fontWeight: 700, color: '#1a1610', letterSpacing: '0.15em', marginLeft: '24px', fontFamily: 'sans-serif' }}>
             MALABARWATCHESOFFICIAL
           </span>
