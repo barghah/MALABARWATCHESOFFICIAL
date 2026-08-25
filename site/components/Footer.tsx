@@ -91,7 +91,7 @@ export default function Footer() {
       <div className="container" style={{ paddingBlock: "2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
         {/* Brand */}
         <div style={{ display: "flex", alignItems: "center" }}>
-          <Image src="/logo.png" alt="Malabar Watches" width={120} height={35} style={{ objectFit: "contain" }} />
+          <Image src="/logo.png" alt="Malabar Watches" width={55} height={31} style={{ objectFit: "contain" }} />
         </div>
 
         {/* Copyright */}

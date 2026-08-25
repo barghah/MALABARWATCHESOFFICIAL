@@ -64,7 +64,7 @@ export default function Navbar() {
             style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
             aria-label="Home"
           >
-            <Image src="/logo.png" alt="Malabar Watches" width={140} height={40} style={{ objectFit: "contain" }} priority />
+            <Image src="/logo.png" alt="Malabar Watches" width={60} height={34} style={{ objectFit: "contain" }} priority />
           </button>
 
           {/* Desktop nav */}
@@ -108,7 +108,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(243, 239, 230, 0.97)", backdropFilter: "blur(24px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem" }}
           >
-            <Image src="/logo.png" alt="Malabar Watches" width={200} height={60} style={{ objectFit: "contain" }} priority />
+            <Image src="/logo.png" alt="Malabar Watches" width={90} height={50} style={{ objectFit: "contain" }} priority />
             {NAV_LINKS.map((link, i) => (
               <motion.button key={link.href}
                 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
