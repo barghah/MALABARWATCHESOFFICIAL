@@ -59,7 +59,7 @@ export default function Hero() {
         <div style={{
           position: "absolute", top: "10%", right: "-5%",
           width: "50vw", height: "80vh",
-          background: "radial-gradient(ellipse at center, rgba(40,28,10,0.9) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(201,165,92,0.06) 0%, transparent 70%)",
         }} />
         {/* Fine grid */}
         <div style={{
