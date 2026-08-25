@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+  },
   icons: {
     icon: "/favicon.svg",
   },
