@@ -73,14 +73,12 @@ export default function Hero() {
       <motion.div style={{ opacity: fadeOut, position: "relative", zIndex: 2 }} className="container">
         <div style={{
           position: "relative", zIndex: 2,
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: "clamp(2rem, 5vw, 6rem)",
           alignItems: "center",
           minHeight: "100svh",
-          paddingTop: "76px",
+          paddingTop: "120px",
           paddingBottom: "4rem",
-        }} className="hero-grid">
+        }} className="grid grid-cols-1 lg:grid-cols-2">
 
           {/* ── Left: Text content ── */}
           <motion.div style={{ y: textY }}>
@@ -199,7 +197,7 @@ export default function Hero() {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 position: "relative",
-                width: "min(500px, 44vw)",
+                width: "min(500px, 90vw)",
                 aspectRatio: "1",
                 borderRadius: "50%",
                 overflow: "hidden",
