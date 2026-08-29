@@ -121,13 +121,33 @@ export default function Hero() {
             />
 
             {/* Subtext */}
-            <motion.p className="t-body" style={{ maxWidth: "440px", marginBottom: "2.5rem", color: "var(--accent-bronze)" }}
+            <motion.p className="t-body" style={{ maxWidth: "440px", marginBottom: "1.5rem", color: "var(--accent-bronze)" }}
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              Kerala&apos;s curated destination for authentic Swiss timepieces — Tissot and beyond.
+              Kerala&apos;s curated destination for authentic Swiss timepieces — Rado, Tissot, Omega and beyond.
               Every watch is genuine, every deal is personal. Enquire directly on WhatsApp.
             </motion.p>
+
+            {/* Featured watch caption */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.08, duration: 0.7 }}
+              style={{
+                display: "inline-flex", alignItems: "center", gap: "10px",
+                marginBottom: "2.5rem",
+                padding: "0.55rem 1rem",
+                background: "rgba(226, 204, 174, 0.55)",
+                border: "1px solid rgba(74, 44, 22, 0.13)",
+                borderRadius: "8px",
+                backdropFilter: "blur(8px)",
+              }}
+            >
+              <span style={{ fontSize: "0.58rem", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent-bronze)" }}>Featured</span>
+              <span style={{ width: "1px", height: "12px", background: "rgba(74,44,22,0.2)" }} />
+              <span style={{ fontFamily: "var(--serif)", fontSize: "0.82rem", color: "var(--accent-dark)", fontWeight: 600 }}>Chemin des Tourelles</span>
+              <span style={{ fontSize: "0.72rem", color: "var(--accent-bronze)", fontWeight: 500 }}>· Powermatic 80 · Swiss Made</span>
+            </motion.div>
 
             {/* CTAs */}
             <motion.div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
@@ -204,35 +224,35 @@ export default function Hero() {
                 justifyContent: "center"
               }}
             >
-              <div style={{ position: "relative", width: "90%", height: "90%" }}>
+              <div style={{ position: "relative", width: "85%", height: "85%" }}>
                 <Image
-                  src="/watches/watch_hero.png"
-                  alt="Tissot Chemin des Tourelles Powermatic 80"
+                  src="/logo.png"
+                  alt="Malabar Watches Official Logo"
                   fill priority
                   sizes="(max-width: 860px) 80vw, 44vw"
                   style={{
                     objectFit: "contain",
-                    filter: "drop-shadow(0 12px 28px rgba(74,44,22,0.22))"
+                    filter: "drop-shadow(0 8px 20px rgba(74,44,22,0.18))"
                   }}
                 />
               </div>
             </motion.div>
 
-            {/* Floating info card */}
+            {/* Floating brand badge */}
             <motion.div className="glass max-sm:scale-75 max-sm:origin-bottom-right"
               initial={{ opacity: 0, y: 20, x: 20 }} animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.3, type: "spring", stiffness: 180 }}
               style={{
                 position: "absolute", bottom: "8%", right: "-6%",
-                padding: "1.1rem 1.3rem", borderRadius: "14px", minWidth: "160px",
-                background: "rgba(226, 204, 174, 0.85)",
+                padding: "1rem 1.2rem", borderRadius: "14px",
+                background: "rgba(226, 204, 174, 0.88)",
                 border: "1px solid rgba(74, 44, 22, 0.15)",
-                boxShadow: "0 10px 30px rgba(74, 44, 22, 0.1)"
+                boxShadow: "0 10px 30px rgba(74, 44, 22, 0.1)",
+                textAlign: "center"
               }}
             >
-              <p style={{ fontSize: "0.6rem", color: "var(--accent-dark)", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: 800, marginBottom: "3px" }}>Featured</p>
-              <p style={{ fontFamily: "var(--serif)", fontSize: "0.92rem", color: "var(--accent-dark)", fontWeight: 700, lineHeight: 1.2, marginBottom: "2px" }}>Chemin des Tourelles</p>
-              <p style={{ fontSize: "0.68rem", color: "var(--accent-bronze)", fontWeight: 500 }}>Powermatic 80 · Swiss Made</p>
+              <p style={{ fontSize: "0.58rem", color: "var(--accent-bronze)", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: 800, marginBottom: "4px" }}>Swiss · Certified</p>
+              <p style={{ fontFamily: "var(--serif)", fontSize: "1rem", color: "var(--accent-dark)", fontWeight: 700, lineHeight: 1.15 }}>Authentic<br/>Timepieces</p>
             </motion.div>
 
             {/* Top left badge */}
