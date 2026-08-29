@@ -31,9 +31,9 @@ export default function Hero() {
   const scrollDown = () => document.querySelector("#collection")?.scrollIntoView({ behavior: "smooth" });
 
   const stats = [
-    { value: "1853", label: "Est. Heritage" },
     { value: `${watchCount}+`, label: "Curated Models" },
     { value: "100%", label: "Verified Authentic" },
+    { value: "Direct", label: "WhatsApp Deals" },
   ];
 
   return (

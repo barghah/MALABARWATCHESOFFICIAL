@@ -20,22 +20,22 @@ export default function Footer() {
           overflow: "hidden",
         }}
       >
-        {/* Decorative large number watermark */}
+        {/* Decorative large watermark */}
         <div style={{
           position: "absolute",
           top: "50%", left: "50%",
           transform: "translate(-50%, -50%)",
           fontFamily: "var(--serif)",
-          fontSize: "clamp(8rem, 20vw, 18rem)",
+          fontSize: "clamp(3.5rem, 10vw, 8.5rem)",
           fontWeight: 900,
           color: "rgba(74, 44, 22, 0.04)",
           userSelect: "none",
-          letterSpacing: "-0.05em",
+          letterSpacing: "0.12em",
           lineHeight: 1,
           pointerEvents: "none",
           whiteSpace: "nowrap",
         }}>
-          1853
+          MALABAR
         </div>
 
         <p className="t-eyebrow" style={{ marginBottom: "1.5rem" }}>Get in Touch</p>

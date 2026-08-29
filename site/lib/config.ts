@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   description:
     "Kerala's premier destination for authentic Swiss timepieces. Genuine watches, direct inquiry via WhatsApp.",
   location: "Kerala, India",
-  instagram: "https://www.instagram.com/malabarwatchesofficial",
+  instagram: "https://www.instagram.com/malabarwatchsofficial?igsi=enU2ZGF6aHp2aHd5",
   whatsappNumber: WHATSAPP_NUMBER,
 };
 

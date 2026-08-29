@@ -13,7 +13,7 @@ export default function Marquee({ reverse = false }: { reverse?: boolean }) {
     "✦",
     "Malabar",
     "✦",
-    "1853",
+    "Rado",
     "✦",
     "Luxury Timepieces",
     "✦",
